@@ -1,0 +1,132 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0px;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	min-width: 320px;
+}
+
+body {
+	color: #fff;
+	background: #09090c;
+	line-height: 1;
+	font-size: 1.75rem;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+
+a {
+	color: inherit;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	overflow: hidden;
+	main {
+		flex: 1 1 auto;
+	}
+	> * {
+		min-width: 0;
+	}
+}
+
+.button {
+	overflow: hidden;
+	display: inline-block;
+	border-radius: 16px;
+	padding: 30px 68px;
+	font-size: 1.25rem;
+	letter-spacing: 0.1em;
+	&:not(:last-child) {
+		margin: 0 24px 0 0;
+	}
+	span {
+		position: relative;
+		z-index: 1;
+	}
+
+	&_common {
+		background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.1) 0%,
+			rgba(255, 255, 255, 0.13) 50%,
+			rgba(255, 255, 255, 0.1) 100%
+		);
+		backdrop-filter: blur(10px);
+		@media (any-hover: hover) {
+			transition: background-color 0.3s ease 0s;
+			&:hover {
+				background-color: #333;
+			}
+		}
+	}
+	&_blue {
+		background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+		@media (any-hover: hover) {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				transition: background-color 0.3s ease 0s;
+			}
+			&:hover {
+				&::before {
+					background-color: #2575fc;
+				}
+			}
+		}
+	}
+}
