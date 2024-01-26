@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "./globals.scss";
-import SiderBar from "@/components/SiderBar";
+import SiderBar from "@/components/SideBar";
 
 const roboto = Roboto({ subsets: ["cyrillic"], weight: ["400", "500", "700"] });
 

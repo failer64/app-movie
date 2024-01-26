@@ -11,6 +11,7 @@
 .poster {
 	position: relative;
 	border-radius: 28px;
+	overflow: hidden;
 	//border-image: linear-gradient(#5712b1, #2575fc) 30;
 	//border-width: 4px;
 	//border-style: solid;
@@ -30,4 +31,21 @@
 	font-size: 1.75rem;
 	color: #fff;
 	margin-top: 20px;
+}
+
+.rating {
+	position: absolute;
+	top: 28px;
+	left: 28px;
+	height: 48px;
+	width: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	//padding: 14px 22px;
+	border-radius: 12px;
+	color: #fff;
+	font-size: 1.75rem;
+	background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
 }

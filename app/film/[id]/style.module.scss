@@ -33,7 +33,7 @@
 .slogan {
 	font-size: 1.75rem;
 	line-height: 1.3;
-	margin-bottom: 110px;
+	margin: 20px 0 110px 0;
 }
 
 .title {
@@ -49,4 +49,41 @@
 .text {
 	font-size: 1.875rem;
 	line-height: 1.3;
+}
+
+.info {
+	display: inline-block;
+	font-size: 1.75rem;
+	&:first-child {
+		padding: 13px 22px;
+		border-radius: 12px;
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+	&:not(:last-child) {
+		margin-right: 32px;
+	}
+}
+
+.button {
+	padding: 24px 32px;
+	img {
+		height: 20px;
+		width: 26px;
+	}
+}
+
+.attention {
+	display: flex;
+	align-items: flex-start;
+	margin: 24px 0 0 0;
+	img {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+	p {
+		font-size: 1.75rem;
+		color: #4b4b4b;
+		line-height: 1.3;
+	}
 }

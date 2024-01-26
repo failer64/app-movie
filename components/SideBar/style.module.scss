@@ -1,0 +1,25 @@
+.sider {
+	position: relative;
+	flex: 0 0 215px;
+	padding: 40px 55px;
+}
+
+.logo {
+	display: block;
+	margin: 0 0 110px 0;
+}
+
+.item {
+	&:not(:last-child) {
+		margin-bottom: 38px;
+	}
+}
+.list {
+}
+
+.wrapper {
+	position: fixed;
+	text-align: center;
+	transform: translateX(38%);
+	overflow: auto;
+}
