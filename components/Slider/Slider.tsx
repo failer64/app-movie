@@ -1,8 +1,9 @@
-//"use client";
+"use client";
 import Image from "next/image";
 import styles from "./style.module.scss";
-import { Card, Carousel } from "antd";
+import { Carousel } from "antd";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type PropsType = {
   films: any[];
@@ -17,6 +18,7 @@ const settings = {
   //lazyLoad: true,
   arrows: false,
   dots: false,
+  infinite: false,
   //nextArrow: <ArrowNext />,
   //prevArrow: <ArrowPrev />,
   responsive: [
@@ -46,17 +48,23 @@ const settings = {
 };
 
 const Slider: React.FC<PropsType> = ({ films }) => {
+  const router = useRouter();
   return (
     <>
       {!!films.length && (
-        <Carousel {...settings}>
+        <Carousel {...settings} draggable>
           {films.map((film) => (
-            <Link key={film.id} href={`film/${film.id}`}>
+            <div
+              onDoubleClick={() => router.push(`film/${film.id}`)}
+              key={film.id}
+              className={styles.slide}
+            >
               <div className={styles.poster}>
                 <Image src={film.poster} alt={`${film.name} poster`} />
+                <div className={styles.rating}>{film.rating}</div>
               </div>
               <h4 className={styles.label}>{film.name}</h4>
-            </Link>
+            </div>
           ))}
         </Carousel>
       )}

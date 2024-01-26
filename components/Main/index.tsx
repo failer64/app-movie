@@ -28,7 +28,6 @@ async function getData() {
 
 export default async function Main() {
   const film = await getData();
-  //console.log(film);
   return (
     <div className={styles.wrapper}>
       <div className={styles.body}>
@@ -44,7 +43,12 @@ export default async function Main() {
         </Link>
       </div>
       <div className={styles.bg}>
-        <Image src={film.poster} alt={"Film poster"} />
+        <Image
+          src={film.poster}
+          alt={"Film poster"}
+          priority
+          placeholder="empty"
+        />
       </div>
     </div>
   );

@@ -18,26 +18,31 @@ async function getData(year: number, month: string) {
       name: "Синий жук",
       id: 1,
       poster,
+      rating: 10,
     },
     {
       name: "Домашняя игра",
       id: 2,
       poster,
+      rating: 6.9,
     },
     {
       name: "Салют 7",
       id: 3,
       poster,
+      rating: 5.8,
     },
     {
       name: "Поймай меня, если сможешь",
       id: 4,
       poster,
+      rating: 7,
     },
     {
       name: "Зеленая миля",
       id: 5,
       poster,
+      rating: 10,
     },
   ]);
   return data;
